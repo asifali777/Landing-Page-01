@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finder</title>
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body class="font-lato ">
+    <!--  START WRAPPER -->
+    <div class="lg:px-20 sm:px-5 px-4">
+      <!-- START HEADER  -->
+      <div>
+        <!-- START NAV  -->
+        <nav class="w-full h-20 flex items-center justify-between">
+          <div id="nav-left" class="flex gap-6 items-center">
+            <img class="w-32" src="./assets/svg/logo-dark.svg" alt="" />
+            <ul class="lg:flex lg:gap-4 hidden">
+              <li
+                class="font-semibold text-lg hover:text-[#FD5631] p-2 lg:hover:cursor-pointer"
+              >
+                <a href="#">Home</a>
+              </li>
+              <li
+                class="font-semibold text-lg hover:text-[#FD5631] p-2 lg:hover:cursor-pointer"
+              >
+                <a href="#">Catalog</a>
+              </li>
+              <li
+                class="font-semibold text-lg hover:text-[#FD5631] p-2 lg:hover:cursor-pointer"
+              >
+                <a href="#">Account</a>
+              </li>
+              <li
+                class="font-semibold text-lg hover:text-[#FD5631] p-2 lg:hover:cursor-pointer"
+              >
+                <a href="#">Pages</a>
+              </li>
+            </ul>
+          </div>
+          <div id="nav-right" class="flex items-center gap-2 sm:gap-6">
+            <button
+              class="hidden lg:block py-2 font-semibold px-4 text-[#FD5631]"
+            >
+              <i class="fa-regular fa-user"></i> Sign in
+            </button>
+            <div id="hamburger" class="lg:hidden">
+              <img src="./assets/svg/menu.svg" alt="" />
+            </div>
+            <button
+              class="py-2 font-semibold px-4 text-[#ffffff] rounded-lg bg-[#FD5631]"
+            >
+              <i class="fa-solid fa-plus"></i> Add Property
+            </button>
+          </div>
+        </nav>
+        <!-- END NAV  -->
+      </div>
+      <!-- END HEADER  -->
+      <!-- START HERO -->
+      <section
+        class="pt-4 flex gap-2 flex-col-reverse md:flex-row items-center w-full h-fit"
+      >
+        <div id="secLeft" class="w-full md:w-1/2">
+          <h1
+            class="text-4xl text-center md:text-5xl font-semibold py-6 md:text-start"
+          >
+            Easy way to find a perfect property
+          </h1>
+          <p class="text-lg md:text-xl md:py-6 text-center md:text-start">
+            We provide a complete service for the sale, purchase or rental of
+            real estate. We have been operating more than 10 years. Search
+            millions of apartments and houses on Finder.
+          </p>
+        </div>
+        <div id="secRight" class="md:w-1/2">
+          <img
+            class=""
+            src="./assets/Building Images/hero-image-1024x843.jpeg"
+            alt=""
+          />
+        </div>
+      </section>
+      <!-- END HERO -->
+      <!-- START SELECTION COLOUMN  -->
+      <div class="w-full h-fit py-3 px-2 my-8 grid md:grid-flow-col md:gap-4">
+        <div class="flex items-center my-4 border-b py-1 gap-1 text-nowrap">
+          <span class="material-symbols-outlined">house</span> For Rent
+        </div>
+        <div class="flex items-center my-4 border-b py-1 gap-1">
+          <span class="material-symbols-outlined">home_pin</span
+          ><input
+            type="text"
+            placeholder="Location"
+            class="bg-transparent outline-none"
+          />
+        </div>
+        <div class="flex items-center my-4 border-b py-1 gap-1">
+          <span class="material-symbols-outlined"> real_estate_agent </span>
+          Property
+        </div>
+        <div class="flex items-center my-4 border-b py-1 gap-1">
+          <span class="material-symbols-outlined"> payments </span>
+          <span>Price</span>
+          <input type="range" min="0" max="100" step="1" value="20" class="" />
+        </div>
+        <button
+          class="items-center xl:w-[40%] md:px-3 lg:px-0 flex justify-center bg-[#FD5631] text-white my-4 py-3 font-lato font-semibold rounded-xl"
+        >
+          <div class="flex items-center">
+            <span class="material-symbols-outlined"> search </span>
+            <span class="md:hidden">Finder</span>
+          </div>
+        </button>
+      </div>
+      <!-- END SELECTION COLOUMN -->
+      <!-- START CATEGORIES -->
+      <div class="my-4 flex flex-wrap justify-center gap-6 h-fit w-full">
+        <!-- 1 -->
+        <div
+          class="categories hover:cursor-pointer flex gap-4 flex-col shadow-lg hover:shadow-xl rounded-lg h-[140px] w-[170px] justify-center items-center p-2"
+        >
+          <div
+            class="rounded-full bg-[#FFEEEA] transition duration-500 ease-in-out text-[#FD5631] flex justify-center items-center p-3"
+          >
+            <span class="material-symbols-outlined"> house </span>
+          </div>
+          <p class="font-poppins text-xl font-semibold text-center">House</p>
+        </div>
+        <!-- 2 -->
+        <div
+          class="categories hover:cursor-pointer flex gap-4 flex-col shadow-lg hover:shadow-xl rounded-lg h-[140px] w-[170px] justify-center items-center p-2"
+        >
+          <div
+            class="rounded-full bg-[#FFEEEA] transition duration-500 text-[#FD5631] flex justify-center items-center p-3"
+          >
+            <span class="material-symbols-outlined"> apartment </span>
+          </div>
+          <p class="text-xl font-semibold text-center">Apartment</p>
+        </div>
+        <!-- 3 -->
+        <div
+          class="categories hover:cursor-pointer flex gap-4 flex-col shadow-lg hover:shadow-xl rounded-lg h-[140px] w-[170px] justify-center items-center p-2"
+        >
+          <div
+            class="rounded-full bg-[#FFEEEA] transition duration-500 text-[#FD5631] flex justify-center items-center p-3"
+          >
+            <span class="material-symbols-outlined">
+              local_convenience_store
+            </span>
+          </div>
+          <p class="text-xl font-semibold text-center">Commercial</p>
+        </div>
+        <!-- 4 -->
+        <div
+          class="categories hover:cursor-pointer flex gap-4 flex-col shadow-lg hover:shadow-xl rounded-lg h-[140px] w-[170px] justify-center items-center p-2"
+        >
+          <div
+            class="rounded-full bg-[#FFEEEA] transition duration-500 text-[#FD5631] flex justify-center items-center p-3"
+          >
+            <span class="material-symbols-outlined"> payments </span>
+          </div>
+          <p class="text-xl font-semibold text-center">Rent</p>
+        </div>
+        <!-- 5 -->
+        <div
+          class="categories hover:cursor-pointer flex gap-4 flex-col shadow-lg hover:shadow-xl rounded-lg h-[140px] w-[170px] justify-center items-center p-2"
+        >
+          <div
+            class="rounded-full bg-[#FFEEEA] transition duration-500 text-[#FD5631] flex justify-center items-center p-3"
+          >
+            <span class="material-symbols-outlined"> domain_add </span>
+          </div>
+          <p class="text-xl font-semibold text-center">New Building</p>
+        </div>
+        <!-- 6 -->
+        <div
+          class="categories hover:cursor-pointer flex gap-4 flex-col shadow-lg hover:shadow-xl rounded-lg h-[140px] w-[170px] justify-center items-center p-2"
+        >
+          <div
+            class="rounded-full bg-[#FFEEEA] transition duration-500 text-[#FD5631] flex justify-center items-center p-3"
+          >
+            <span class="material-symbols-outlined"> more_horiz </span>
+          </div>
+          <p class="text-xl font-semibold text-center">More</p>
+        </div>
+      </div>
+      <!-- END CATEGORIES -->
+      <!-- START BUY/SELL/RENT  -->
+      <div class="flex flex-wrap justify-center w-full h-fit gap-4">
+        <!-- 1 -->
+        <div
+          class="buy-sell-rent grid my-8 w-[350px] content-center text-center hover:shadow-xl transition duration-500 py-4 px-2 rounded-xl"
+        >
+          <div class="w-full flex justify-center mb-4">
+            <img class="h-44" src="./assets/svg/buy.svg" alt="" />
+          </div>
+          <p class="font-semibold text-xl">
+            Buy a <br />
+            property
+          </p>
+          <p class="py-4 font-robo">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam at
+            nihil non commodi voluptates totam deserunt officiis, dignissimos.
+          </p>
+          <div>
+            <button
+              class="font-robo font-semibold border min-w-[50%] rounded-lg p-3 text-nowrap border-[#FD5631] transition duration-300 text-[#FD5631]"
+            >
+              <span>Find a home</span>
+            </button>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div
+          class="buy-sell-rent grid my-8 w-[350px] content-center text-center hover:shadow-xl transition duration-500 py-4 px-2 rounded-xl"
+        >
+          <div class="w-full flex justify-center mb-4">
+            <img class="h-44" src="./assets/svg/sell.svg" alt="" />
+          </div>
+          <p class="font-semibold text-xl">
+            Sell a <br />
+            property
+          </p>
+          <p class="py-4 font-robo">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam at
+            nihil non commodi voluptates totam deserunt officiis, dignissimos.
+          </p>
+          <div>
+            <button
+              class="font-robo font-semibold border min-w-[50%] rounded-lg p-3 text-nowrap border-[#FD5631] transition duration-300 text-[#FD5631]"
+            >
+              <span>Place an ad</span>
+            </button>
+          </div>
+        </div>
+        <!-- 3 -->
+        <div
+          class="buy-sell-rent grid my-8 w-[350px] content-center text-center hover:shadow-xl transition duration-500 py-4 px-2 rounded-xl"
+        >
+          <div class="w-full flex justify-center mb-4">
+            <img class="h-44" src="./assets/svg/rent.svg" alt="" />
+          </div>
+          <p class="font-semibold text-xl">
+            Rent a <br />
+            property
+          </p>
+          <p class="py-4 font-robo">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam at
+            nihil non commodi voluptates totam deserunt officiis, dignissimos.
+          </p>
+          <div>
+            <button
+              class="md: font-robo font-semibold border rounded-lg p-3 min-w-[50%] border-[#FD5631] transition duration-300 text-[#FD5631] text-nowrap"
+            >
+              <span>Find a rental</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- END BUY/SELL/RENT  -->
+      <!-- START TOP OFFERS -->
+      <div class="w-full py-4">
+        <p class="font-semibold text-3xl">Top Offers</p>
+      </div>
+<div class="my-8 w-full h-fit py-3 flex overflow-x-scroll cursor-all-scroll whitespace-nowrap justify-start gap-4">
+        <!-- 1 -->
+        <div class="rounded-xl w-[300px] h-fit shadow-lg">
+          <div class="w-full h-44 bg-red-200 rounded-t-xl">
+            <img
+              class="h-full w-full object-cover rounded-t-xl"
+              src="https://media.istockphoto.com/id/1482326431/photo/interior-bedroom-wall-mockup-3d-rendering-3d-illustration.jpg?s=2048x2048&w=is&k=20&c=i_YqI5vUuXTJKqALtm6v-nGf3MO5W5n295m1WS6lrNU="
+              alt="img1"
+            />
+          </div>
+          <div class="w-full h-fit p-4">
+            <p class="py-1 text-sm text-[#FD5631]">FOR RENT</p>
+            <p class="py-1 text-lg font-semibold">3-Bed Apartment | 67 sq.m</p>
+            <p class="py-1 text-sm text-gray-700">
+              3811 Ditmars Bivd, Astoria, NY 11105 USA
+            </p>
+            <div>
+              <p class="font-semibold">$1,629</p>
+            </div>
+            <div
+              class="py-1 w-full h-[.5px] border-b-[.5px] border-slate-950"
+            ></div>
+          </div>
+          <div class="pb-4 gap-4 flex justify-center items-center">
+            <div class="flex items-center">
+              <span>3</span><span class="material-symbols-outlined"> bed </span>
+            </div>
+
+            <div class="flex items-center">
+              <span>2</span>
+              <span class="material-symbols-outlined"> bathtub </span>
+            </div>
+            <div class="flex items-center">
+              <span>1</span>
+              <span class="material-symbols-outlined"> directions_car </span>
+            </div>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div class="rounded-xl w-[300px] h-fit shadow-lg">
+          <div class="w-full h-44 bg-red-200 rounded-t-xl">
+            <img
+              class="h-full w-full object-cover rounded-t-xl"
+              src="https://media.istockphoto.com/id/1483521769/photo/a-hotel-bed-with-sky-view.jpg?s=2048x2048&w=is&k=20&c=LGcJRLqjHhW34qSh8fHQpsrydctKimk4nFYTNIsysAs="
+              alt="img1"
+            />
+          </div>
+          <div class="w-full h-fit p-4">
+            <p class="py-1 text-sm text-[#FD5631]">FOR RENT</p>
+            <p class="py-1 text-lg font-semibold">3-Bed Apartment | 67 sq.m</p>
+            <p class="py-1 text-sm text-gray-700">
+              3811 Ditmars Bivd, Astoria, NY 11105 USA
+            </p>
+            <div>
+              <p class="font-semibold">$1,629</p>
+            </div>
+            <div
+              class="py-1 w-full h-[.5px] border-b-[.5px] border-slate-950"
+            ></div>
+          </div>
+          <div class="pb-4 gap-4 flex justify-center items-center">
+            <div class="flex items-center">
+              <span>3</span><span class="material-symbols-outlined"> bed </span>
+            </div>
+
+            <div class="flex items-center">
+              <span>2</span>
+              <span class="material-symbols-outlined"> bathtub </span>
+            </div>
+            <div class="flex items-center">
+              <span>1</span>
+              <span class="material-symbols-outlined"> directions_car </span>
+            </div>
+          </div>
+        </div>
+        <!-- 3 -->
+        <div class="rounded-xl w-[300px] h-fit shadow-lg">
+            <div class="w-full h-44 bg-red-200 rounded-t-xl">
+              <img
+                class="h-full w-full object-cover rounded-t-xl"
+                src="https://media.istockphoto.com/id/1486230942/photo/modern-bedroom-interior-with-double-bed-wicker-lamps-red-pillows-and-potted-plant.webp?b=1&s=170667a&w=0&k=20&c=USBqinuzky7SILv_dK0ioj4vY1OedQoT1Na6u-Li7Aw="
+                alt="img1"
+              />
+            </div>
+            <div class="w-full h-fit p-4">
+              <p class="py-1 text-sm text-[#FD5631]">FOR RENT</p>
+              <p class="py-1 text-lg font-semibold">3-Bed Apartment | 67 sq.m</p>
+              <p class="py-1 text-sm text-gray-700">
+                3811 Ditmars Bivd, Astoria, NY 11105 USA
+              </p>
+              <div>
+                <p class="font-semibold">$1,629</p>
+              </div>
+              <div
+                class="py-1 w-full h-[.5px] border-b-[.5px] border-slate-950"
+              ></div>
+            </div>
+            <div class="pb-4 gap-4 flex justify-center items-center">
+              <div class="flex items-center">
+                <span>3</span><span class="material-symbols-outlined"> bed </span>
+              </div>
+  
+              <div class="flex items-center">
+                <span>2</span>
+                <span class="material-symbols-outlined"> bathtub </span>
+              </div>
+              <div class="flex items-center">
+                <span>1</span>
+                <span class="material-symbols-outlined"> directions_car </span>
+              </div>
+            </div>
+        </div>
+        <!-- 4 -->
+        <div class="rounded-xl w-[300px] h-fit shadow-lg">
+            <div class="w-full h-44 bg-red-200 rounded-t-xl">
+              <img
+                class="h-full w-full object-cover rounded-t-xl"
+                src="https://media.istockphoto.com/id/654289190/photo/four-poster-bed-with-mosquito-net-in-bright-hotel-room.webp?b=1&s=170667a&w=0&k=20&c=CFlQ1HpOIJ2JZhn3KNX8Nc9v3BjF8So0rWm8gncDEas="
+                alt="img1"
+              />
+            </div>
+            <div class="w-full h-fit p-4">
+              <p class="py-1 text-sm text-[#FD5631]">FOR RENT</p>
+              <p class="py-1 text-lg font-semibold">3-Bed Apartment | 67 sq.m</p>
+              <p class="py-1 text-sm text-gray-700">
+                3811 Ditmars Bivd, Astoria, NY 11105 USA
+              </p>
+              <div>
+                <p class="font-semibold">$1,629</p>
+              </div>
+              <div
+                class="py-1 w-full h-[.5px] border-b-[.5px] border-slate-950"
+              ></div>
+            </div>
+            <div class="pb-4 gap-4 flex justify-center items-center">
+              <div class="flex items-center">
+                <span>3</span><span class="material-symbols-outlined"> bed </span>
+              </div>
+  
+              <div class="flex items-center">
+                <span>2</span>
+                <span class="material-symbols-outlined"> bathtub </span>
+              </div>
+              <div class="flex items-center">
+                <span>1</span>
+                <span class="material-symbols-outlined"> directions_car </span>
+              </div>
+            </div>
+        </div>
+        <!-- 5 -->
+        <div class="rounded-xl w-[300px] h-fit shadow-lg">
+            <div class="w-full h-44 bg-red-200 rounded-t-xl">
+              <img
+                class="h-full w-full object-cover rounded-t-xl"
+                src="https://media.istockphoto.com/id/185083188/photo/luxury-shangri-la-hotel-room.webp?b=1&s=170667a&w=0&k=20&c=Ri0GY4CKzgGlg1WVgZQ-dU2r-vSowmHveAxJ1ijhtv8="
+                alt="img1"
+              />
+            </div>
+            <div class="w-full h-fit p-4">
+              <p class="py-1 text-sm text-[#FD5631]">FOR RENT</p>
+              <p class="py-1 text-lg font-semibold">3-Bed Apartment | 67 sq.m</p>
+              <p class="py-1 text-sm text-gray-700">
+                3811 Ditmars Bivd, Astoria, NY 11105 USA
+              </p>
+              <div>
+                <p class="font-semibold">$1,629</p>
+              </div>
+              <div
+                class="py-1 w-full h-[.5px] border-b-[.5px] border-slate-950"
+              ></div>
+            </div>
+            <div class="pb-4 gap-4 flex justify-center items-center">
+              <div class="flex items-center">
+                <span>3</span><span class="material-symbols-outlined"> bed </span>
+              </div>
+  
+              <div class="flex items-center">
+                <span>2</span>
+                <span class="material-symbols-outlined"> bathtub </span>
+              </div>
+              <div class="flex items-center">
+                <span>1</span>
+                <span class="material-symbols-outlined"> directions_car </span>
+              </div>
+            </div>
+        </div>
+        <!-- 6 -->
+        <div class="rounded-xl w-[300px] h-fit shadow-lg">
+            <div class="w-full h-44 bg-red-200 rounded-t-xl">
+              <img
+                class="h-full w-full object-cover rounded-t-xl"
+                src="https://media.istockphoto.com/id/1256466090/photo/modern-style-bedroom.webp?b=1&s=170667a&w=0&k=20&c=OCzuHV0rCN_2c2CzSyGDFxMpsHi4zw28c6ETpgxIlcg="
+                alt="img1"
+              />
+            </div>
+            <div class="w-full h-fit p-4">
+              <p class="py-1 text-sm text-[#FD5631]">FOR RENT</p>
+              <p class="py-1 text-lg font-semibold">3-Bed Apartment | 67 sq.m</p>
+              <p class="py-1 text-sm text-gray-700">
+                3811 Ditmars Bivd, Astoria, NY 11105 USA
+              </p>
+              <div>
+                <p class="font-semibold">$1,629</p>
+              </div>
+              <div
+                class="py-1 w-full h-[.5px] border-b-[.5px] border-slate-950"
+              ></div>
+            </div>
+            <div class="pb-4 gap-4 flex justify-center items-center">
+              <div class="flex items-center">
+                <span>3</span><span class="material-symbols-outlined"> bed </span>
+              </div>
+  
+              <div class="flex items-center">
+                <span>2</span>
+                <span class="material-symbols-outlined"> bathtub </span>
+              </div>
+              <div class="flex items-center">
+                <span>1</span>
+                <span class="material-symbols-outlined"> directions_car </span>
+              </div>
+            </div>
+          </div>
+
+
+</div>
+      <!-- END TOP OFFERS -->
+
+      <!-- START CALCULATION -->
+
+<div class=" calculator flex-col flex md:flex-row gap-4 justify-center items-center h-fit w-full">
+<div class="w-full flex justify-center items-center">
+  <img class=" w-[350px]" src="./assets/svg/calculator.svg" alt="">
+</div>
+<div class=" text-center md:text-start">
+  <p class=" text-3xl font-semibold"> Calculate the cost of your property</p>
+  <p class=" py-3">Real estate appraisal is a procedure that allows you to determine the average market value of real estate (apartment, house, land, etc.). Calculate the cost of your property with our new Calculation Service.</p>
+  <button class=" mt-2 bg-[#FD5631] py-3 px-4 text-white rounded-lg">Calculate</button>
+</div>
+</div>
+      <!-- END CALCULATION -->
+
+</div>
+<!-- END WRAPPER -->
+ 
+<footer class=" flex gap-6 flex-wrap w-full h-fit md:p-24 p-8 md:justify-evenly bg-[#F5F4F8]">
+
+  <div>
+    <img class="w-32 my-3" src="./assets/svg/logo-dark.svg" alt="" />
+    <p>example.@gmail.com</p>
+    <p>9876512345</p>
+  </div>
+  <div>
+    <p class=" font-semibold text-xl my-3">Quick Links</p>
+    <ul>
+      <li>Buy a Prop</li>
+      <li>Sell a Prop</li>
+      <li>Rent a Prop</li>
+      <li>Calculate your prop</li>
+      <li>Top offers</li>
+      <li>Top cities</li>
+    </ul>
+  </div>
+  <div>
+    <p class=" font-semibold text-xl m-3">About</p>
+    <ul>
+      <li>About us</li>
+      <li>Our agent</li>
+      <li>Help and support</li>
+      <li>News</li>
+    </ul>
+  </div>
+  
+  
+  </footer>
+  </body>
+</html>

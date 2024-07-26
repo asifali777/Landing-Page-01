@@ -1,0 +1,11 @@
+.categories:hover div{
+    background-color: #FD5631;
+    color: white;
+} 
+.buy-sell-rent:hover button{
+    background-color: #FD5631;
+    color: white;
+}
+.calculator{
+    margin: 40px 0 40px 0;
+}
